@@ -89,7 +89,7 @@ public class CardTrick {
         System.out.println("-- Ice skating");
         System.out.println("-- Cooking");
         System.out.println("-- Learning about technology");
-        System.out.println("-- Swimming");
+        System.out.println("-- Learning new skills");
 
         System.out.println();
         
