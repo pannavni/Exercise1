@@ -10,6 +10,7 @@ package exercise1;
  * @author dancye
  * @author Paul Bonenfant May 2020
  * @modifier Navnit Pannu
+ * Date modified: October 22, 2026
  */
 public class Card {
 

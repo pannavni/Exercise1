@@ -10,7 +10,8 @@ import java.util.Scanner;
  *
  * @author dancye
  * @author Paul Bonenfant Jan 25, 2022 
- * @modifier Navnit Pannu
+ * @author Navnit Pannu
+ * Date modified: October 22, 2026
  */
 public class CardTrick {
     
@@ -18,7 +19,7 @@ public class CardTrick {
         
         Random random = new Random();
         Scanner input = new Scanner(System.in);
-        
+            
         Card[] hand = new Card[7];
 
         for (int i = 0; i < hand.length; i++) {
@@ -47,14 +48,21 @@ public class CardTrick {
         guessedCard.setValue(guessedValue);
         guessedCard.setSuit(Card.SUITS[guessedSuit - 1]);
         
-       for (int i = 0; i < hand.length; i++) {
-        if (hand[i].getValue() == guessedCard.getValue()
+      boolean found = false;
+
+    for (int i = 0; i < hand.length; i++) {
+    if (hand[i].getValue() == guessedCard.getValue()
             && hand[i].getSuit().equals(guessedCard.getSuit())) {
-                printInfo();
-                break;
-               }
-            }
-        
+        found = true;
+        printInfo();
+        break;
+    }
+        }
+
+if (!found) {
+    System.out.println("Sorry, your card is not in the hand.");
+}
+
         // insert code to ask the user for Card value and suit, create their card
         // and search the hand here. 
         // Hint: You can ask for values 1 to 10, and then
